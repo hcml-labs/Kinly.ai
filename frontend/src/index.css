@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FamilySync Design System - Warm, friendly, family-oriented */
+
+@layer base {
+  :root {
+    /* Warm cream/off-white background */
+    --background: 40 33% 98%;
+    --foreground: 240 10% 15%;
+
+    /* Soft cream cards */
+    --card: 40 40% 99%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Warm coral/terracotta primary */
+    --primary: 12 76% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft sage green secondary */
+    --secondary: 142 26% 90%;
+    --secondary-foreground: 142 40% 25%;
+
+    /* Muted warm gray */
+    --muted: 40 20% 94%;
+    --muted-foreground: 240 5% 46%;
+
+    /* Soft blue accent */
+    --accent: 199 89% 94%;
+    --accent-foreground: 199 60% 32%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 90%;
+    --ring: 12 76% 61%;
+
+    --radius: 0.75rem;
+
+    /* Category colors */
+    --category-school: 199 89% 48%;
+    --category-health: 142 71% 45%;
+    --category-activity: 280 65% 60%;
+    --category-personal: 35 90% 55%;
+
+    /* Sidebar - warm neutral */
+    --sidebar-background: 40 25% 96%;
+    --sidebar-foreground: 240 10% 25%;
+    --sidebar-primary: 12 76% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 30% 92%;
+    --sidebar-accent-foreground: 240 10% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 12 76% 61%;
+
+    /* Success/warning states */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 240 10% 11%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 240 10% 11%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 12 76% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 20% 18%;
+    --secondary-foreground: 142 30% 80%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 199 40% 20%;
+    --accent-foreground: 199 70% 80%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 12 76% 61%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 12 76% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 240 10% 16%;
+    --sidebar-ring: 12 76% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Category badge colors */
+.category-school {
+  @apply bg-blue-100 text-blue-800 border-blue-200;
+}
+
+.category-health {
+  @apply bg-red-100 text-red-800 border-red-200;
+}
+
+.category-activity {
+  @apply bg-green-100 text-green-800 border-green-200;
+}
+
+.category-personal {
+  @apply bg-purple-100 text-purple-800 border-purple-200;
+}
+
+/* Calendar event colors */
+.event-school {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.event-health {
+  @apply bg-red-500 hover:bg-red-600;
+}
+
+.event-activity {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+.event-personal {
+  @apply bg-purple-500 hover:bg-purple-600;
+}
